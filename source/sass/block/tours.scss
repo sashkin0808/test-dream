@@ -1,0 +1,121 @@
+.tours {
+	padding-top: 64px;
+	padding-bottom: 64px;
+
+	&__title {
+		padding-bottom: 64px;
+
+		@media (max-width: 480px) {
+			padding-bottom: 40px;
+		}
+	}
+	.carousel__item {
+		width: 373px;
+		max-width: 30%;
+
+		@media screen and (max-width: 768px) {
+			width: 313px;
+			max-width: 100%;
+		}
+		@media screen and (max-width: 480px) {
+			width: 266px;
+		}
+	}
+	@media screen and (min-width: 769px) {
+		.carousel__btns {
+			display: none;
+		}
+	}
+}
+.tours-item {
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+	overflow: hidden;
+
+	@media screen and (max-width: 991px) {
+		padding: 0;
+	}
+
+	&__img {
+		position: relative;
+		max-width: 313px;
+		margin-bottom: 24px;
+		line-height: 0;
+
+		img {
+			transition: all .2s ease-in-out;
+		}
+	}
+	&__like {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		background-color: #fff;
+		border: none;
+		border-radius: 50%;
+		opacity: 0;
+		cursor: pointer;
+		transition: all 0.2s;
+
+		@media screen and (max-width: 768px) {
+			opacity: 1;
+		}
+
+		@media screen and (max-width: 480px) {
+			top: 8px;
+			right: 8px;
+		}
+	}
+	&__name {
+		margin-bottom: 16px;
+		font-size: 32px;
+		line-height: 1.2;
+		font-weight: 500;
+
+		@media screen and (max-width: 768px) {
+			font-size: 24px;
+		}
+		@media screen and  (max-width: 480px) {
+			font-size: 20px;
+		}
+	}
+	&__desc {
+   		font-size: 16px;
+   		line-height: 1.3;
+   		color: rgba(35, 35, 35, 0.7);
+	}
+	&:hover {
+		@media screen and (min-width: 769px) {
+			.tours-item__img {
+				img {
+					transform: scale(1.2);
+					transform-origin: center bottom;
+				}
+			}
+			.tours-item__like {
+				top: -16px;
+				right: -16px;
+				opacity: 1;
+			}
+		}
+		.tours-item__name {
+			text-decoration: underline;
+  			text-decoration-thickness: 1px;
+  			text-underline-offset: 3px;
+		}
+	}
+	&_liked {
+		.tours-item__like {
+			opacity: 1;
+			svg {
+				fill: $red;
+			}
+		}
+	}
+}

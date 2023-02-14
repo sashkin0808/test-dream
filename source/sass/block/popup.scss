@@ -1,0 +1,90 @@
+.popup {
+	position: fixed;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	overflow-y: scroll;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	opacity: 0;
+  	visibility: hidden;
+  	transition: all 0.3s ease;
+
+  	&::-webkit-scrollbar { 
+	    display: none;  /* Safari and Chrome */
+	}
+	
+	&.open {
+	    visibility: visible;
+	    opacity: 1;
+	    background: rgba(35, 35, 35, 0.4);
+	    transition-delay: 0s;
+	}
+	&__content {
+		position: relative;
+		width: 100%;
+		max-width: 1184px;
+		margin: auto;
+		padding: 64px 40px;
+		background: #fff;
+
+		@media screen and (max-width: 768px) {
+			padding: 46px 20px 40px;
+		}
+	}
+	&__close {
+		position: absolute;
+		top: 40px;
+		right: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		border: 1px solid #EAEAEA;
+		border-radius: 50%;
+		background-color: #fff;
+		cursor: pointer;
+
+		@media screen and (max-width: 768px) {
+			right: 20px;
+		}
+
+		svg {
+			stroke: #EAEAEA
+		}
+		&:hover,
+		&:focus {
+			border-color: $blue;
+			outline: none;
+
+			svg {
+				stroke: $blue;
+			}
+		}
+		&:active {
+			border-color: $blue;
+			background-color: $blue;
+
+			svg {
+				stroke: #fff;
+			}
+		}
+	}
+	&__title {
+		margin-bottom: 64px;
+		padding: 0;
+		font-weight: 500;
+		font-size: 32px;
+		line-height: 38px;
+
+		@media screen and (max-width: 768px) {
+			margin-bottom: 46px;
+			font-size: 30px;
+		}
+		@media screen and (max-width: 480px) {
+			font-size: 24px;
+			line-height: 28px;
+		}
+	}
+}

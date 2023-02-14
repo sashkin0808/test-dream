@@ -1,0 +1,15 @@
+.gallery {
+	margin-left: calc((100% - 1224px)/2);
+	padding-left: 20px;
+
+	@media screen and (max-width: 1224px) {
+		margin-left: 0;
+	}
+	.carousel__item {
+		width: 313px;
+
+		@media screen and (max-width: 480px) {
+			width: 266px;
+		}
+	}
+}

@@ -1,0 +1,119 @@
+@import "normalize.scss";
+@import "fonts.scss";
+@import "var.scss";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+.container {
+	max-width: 1224px;
+	width: 100%;
+	margin: 0 auto;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+@import "block/main.scss";
+@import "block/carousel.scss";
+@import "block/gallery.scss";
+@import "block/tours.scss";
+@import "block/form.scss";
+@import "block/popup.scss";
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {color: inherit;}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+	line-height: 22px;
+	color: #232323;
+	background-color: #fff;
+
+	@media screen and  (max-width: 414px) {
+		font-size: 14px;
+		line-height: 22px;
+	}
+	&.no-scroll {
+	    overflow: hidden;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+a[href^="tel:"] {
+	white-space: nowrap;
+}
+p {
+	margin: 0;
+	padding: 12px 0;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.center {
+	text-align: center;
+}
+h1, h2 {
+	width: 100%;
+	margin: 0;
+	font-size: 40px;
+	line-height: 1.16;
+	font-weight: 500;
+	text-align: left;
+
+	@media screen and (max-width: 768px) {
+		font-size: 30px;
+	}
+	@media screen and (max-width: 480px) {
+		font-size: 24px;
+	}
+}
+.form-btn {
+	display: block;
+	padding: 20px;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	line-height: 22px;
+	background-color: $blue;
+	border: none;
+	transition: background 0.15s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #5B8DAA;
+	}
+}
