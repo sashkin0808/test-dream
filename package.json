@@ -5,9 +5,11 @@
   "description": "тестовое задание",
   "devDependencies": {
     "@glidejs/glide": "^3.6.0",
+    "autoprefixer": "^10.4.13",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "nativejs-select": "^1.0.7",
+    "postcss-loader": "^7.0.2",
     "sass": "^1.58.0",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
@@ -22,5 +24,15 @@
   },
   "dependencies": {
     "css-loader": "^6.7.3"
-  }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "last 2 version",
+    "not dead",
+    "iOS >= 9"
+  ]
 }
