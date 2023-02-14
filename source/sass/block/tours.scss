@@ -34,6 +34,9 @@
 	overflow: hidden;
 
 	@media screen and (max-width: 991px) {
+		padding: 15px;
+	}
+	@media screen and (max-width: 768px) {
 		padding: 0;
 	}
 
@@ -71,6 +74,19 @@
 			top: 8px;
 			right: 8px;
 		}
+		svg {
+			stroke: $red;
+		}
+		&:focus,
+		&:hover {
+			outline: none;
+			background-color: $red;
+			
+			svg {
+				fill: $red;
+				stroke: #fff;
+			}
+		}
 	}
 	&__name {
 		margin-bottom: 16px;
@@ -96,12 +112,21 @@
 				img {
 					transform: scale(1.2);
 					transform-origin: center bottom;
+
+					@media screen and (max-width: 991px) {
+						transform: scale(1.1);
+					}
 				}
 			}
 			.tours-item__like {
 				top: -16px;
 				right: -16px;
 				opacity: 1;
+
+				@media screen and (max-width: 991px) {
+					top: 0;
+					right: 0;
+				}
 			}
 		}
 		.tours-item__name {
